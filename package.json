@@ -11,7 +11,7 @@
   "license": "ISC",
   "main": "lib/builder.js",
   "bin": {
-    "logo": "lib/builder.js"
+    "logo": "lib/cli.js"
   },
   "keywords": [],
   "publishConfig": {
