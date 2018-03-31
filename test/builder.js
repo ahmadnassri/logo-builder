@@ -25,7 +25,7 @@ test('fails when format is invalid', assert => {
 test('use default values', async assert => {
   const result = await builder(config.valid.minimal, fixtures)
 
-  writeFileSync(join(fixtures, 'results', 'minimal.svg'), result)
+  // writeFileSync(join(fixtures, 'results', 'minimal.svg'), result)
 
   assert.plan(1)
   assert.same(result, readFileSync(join(fixtures, 'results', 'minimal.svg')))
@@ -34,7 +34,7 @@ test('use default values', async assert => {
 test('full example', async assert => {
   const result = await builder(config.valid.detailed, fixtures)
 
-  writeFileSync(join(fixtures, 'results', 'detailed.svg'), result)
+  // writeFileSync(join(fixtures, 'results', 'detailed.svg'), result)
 
   assert.plan(1)
   assert.same(result, readFileSync(join(fixtures, 'results', 'detailed.svg')))
