@@ -1,0 +1,46 @@
+{
+  "version": "0.0.0-development",
+  "name": "@ahmadnassri/logo-builder",
+  "description": "a simple logo spec builder",
+  "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
+  "homepage": "https://github.com/ahmadnassri/logo-builder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadnassri/logo-builder.git"
+  },
+  "license": "ISC",
+  "main": "lib/builder.js",
+  "bin": {
+    "logo": "lib/builder.js"
+  },
+  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/logo-builder/issues"
+  },
+  "scripts": {
+    "pretest": "npm run test:codeclimate",
+    "test": "npm run test:tap",
+    "test:codeclimate": ".scripts/codeclimate analyze",
+    "test:tap": "tap test --100 --coverage-report=lcov --no-browser",
+    "coverage": "opener coverage/lcov-report/index.html"
+  },
+  "devDependencies": {
+    "tap": "^11.1.0"
+  },
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "canvas": "^2.0.0-alpha.12",
+    "canvg": "^1.0.0",
+    "xml2js": "^0.4.19",
+    "yargs": "^11.0.0"
+  }
+}

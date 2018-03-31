@@ -1,0 +1,22 @@
+{
+  "size": {
+    "width": 1000,
+    "height": 500,
+    "scale": 0.2,
+    "padding": 25
+  },
+  "title": {
+    "text": "Logo Builder",
+    "font": {
+      "name": "Pacifico-Regular",
+      "path": "font.ttf",
+      "color": "#2e2b74",
+      "source": "https://fonts.google.com/specimen/Pacifico"
+    }
+  },
+  "icon": {
+    "path": "icon.svg",
+    "color": "#ef4044",
+    "source": "https://thenounproject.com/icon/630598/"
+  }
+}

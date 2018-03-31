@@ -1,0 +1,77 @@
+{
+  "valid": {
+    "minimal": {
+      "size": {
+        "width": 500,
+        "height": 200
+      },
+      "title": {
+        "text": "Logo Title",
+        "font": {
+          "name": "Roboto",
+          "path": "font.ttf"
+        }
+      },
+      "icon": {
+        "path": "icon.svg"
+      }
+    },
+    "detailed": {
+      "size": {
+        "width": 500,
+        "height": 200,
+        "scale": 0.2,
+        "padding": 25
+      },
+      "background": "#FFFFFF",
+      "title": {
+        "text": "Logo Title",
+        "font": {
+          "name": "Roboto",
+          "path": "font.ttf",
+          "color": "#2e2b74",
+          "source": "https://fonts.google.com/specimen/Roboto"
+        }
+      },
+      "icon": {
+        "path": "icon.svg",
+        "color": "#ef4044",
+        "source": "https://thenounproject.com/icon/318010/"
+      }
+    }
+  },
+  "invalid": {
+    "font": {
+      "size": {
+        "width": 500,
+        "height": 200
+      },
+      "title": {
+        "text": "Logo Title",
+        "font": {
+          "name": "Roboto",
+          "path": "not-the-font.ttf"
+        }
+      },
+      "icon": {
+        "path": "icon.svg"
+      }
+    },
+    "icon": {
+      "size": {
+        "width": 500,
+        "height": 200
+      },
+      "title": {
+        "text": "Logo Title",
+        "font": {
+          "name": "Roboto",
+          "path": "font.ttf"
+        }
+      },
+      "icon": {
+        "path": "not-the-icon.svg"
+      }
+    }
+  }
+}

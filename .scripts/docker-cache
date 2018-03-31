@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+CACHE=~/docker-cache
+
+mkdir -p $CACHE
+
+images=(codeclimate duplication csslint eslint fixme nodesecurity markdownlint shellcheck editorconfig)
+
+save () {
+  local image=${1}
+
+  if [ "$image" = "codeclimate" ]; then
+    source=ahmadnassri/codeclimate:fail-on-exit
+  elif [ "$image" = "editorconfig" ]; then
+    source=codeclimate/codeclimate-$image:beta
+  else
+    source=codeclimate/codeclimate-$image
+  fi
+
+  docker pull "$source"
+
+  echo "saving $image"
+  docker save -o "$CACHE/$image.tar" "$source"
+}
+
+load () {
+  echo "loading $1"
+  docker load -i "$CACHE/$1.tar" &>/dev/null
+}
+
+for image in "${images[@]}"
+do
+if [ -f "$CACHE/$image.tar" ]; then
+  load "$image"
+else
+  save "$image"
+  load "$image"
+fi
+done

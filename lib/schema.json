@@ -1,0 +1,172 @@
+{
+  "title": "Logo Builder Schema",
+  "description": "JSON Schema for Logo Builder configuration",
+  "definitions": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "size",
+    "title",
+    "icon"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "background": {
+      "title": "Background",
+      "description": "Background Fill Color",
+      "$ref": "#/definitions/nonEmptyString",
+      "examples": [
+        "#FFFFFF",
+        "#2e2b74",
+        "#ef4044"
+      ]
+    },
+    "size": {
+      "title": "Logo Size",
+      "description": "Used to determine logo dimensions and area fill",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height"
+      ],
+      "properties": {
+        "width": {
+          "title": "Width",
+          "description": "Logo Width",
+          "type": "integer"
+        },
+        "height": {
+          "title": "Height",
+          "description": "Logo Height",
+          "type": "integer"
+        },
+        "padding": {
+          "title": "Padding",
+          "description": "Padding between icon and text",
+          "type": "integer",
+          "default": "25"
+        },
+        "scale": {
+          "title": "Scale",
+          "description": "Content Scale within logo area",
+          "type": "number",
+          "default": "0.2"
+        }
+      }
+    },
+    "title": {
+      "title": "Title",
+      "description": "Logo Title configuration",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "font"
+      ],
+      "properties": {
+        "text": {
+          "title": "Text",
+          "description": "Logo Text",
+          "$ref": "#/definitions/nonEmptyString",
+          "examples": [
+            "Acme Inc"
+          ]
+        },
+        "font": {
+          "title": "Font",
+          "description": "Logo Title font configuration",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "path"
+          ],
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "Font Name",
+              "$ref": "#/definitions/nonEmptyString",
+              "examples": [
+                "Roboto",
+                "Arial"
+              ]
+            },
+            "path": {
+              "title": "Path",
+              "description": "Path to font file relative to config file",
+              "$ref": "#/definitions/nonEmptyString",
+              "examples": [
+                "fonts/roboto.ttf",
+                "fonts/arial.ttf"
+              ]
+            },
+            "color": {
+              "title": "Color",
+              "description": "Font color",
+              "$ref": "#/definitions/nonEmptyString",
+              "examples": [
+                "#000000",
+                "#2e2b74",
+                "#ef4044"
+              ]
+            },
+            "source": {
+              "title": "Source",
+              "description": "Link to font source",
+              "$ref": "#/definitions/nonEmptyString",
+              "examples": [
+                "https://fonts.google.com/specimen/Roboto"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "icon": {
+      "title": "Icon",
+      "description": "Logo Icon configuration",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path"
+      ],
+      "properties": {
+        "path": {
+          "title": "Path",
+          "description": "Path to icon file relative to config file",
+          "$ref": "#/definitions/nonEmptyString",
+          "examples": [
+            "icons/square.svg",
+            "icons/circle.png"
+          ]
+        },
+        "color": {
+          "title": "Color",
+          "description": "Icon color",
+          "$ref": "#/definitions/nonEmptyString",
+          "examples": [
+            "#000000",
+            "#2e2b74",
+            "#ef4044"
+          ]
+        },
+        "source": {
+          "title": "Source",
+          "description": "Link to icon source",
+          "$ref": "#/definitions/nonEmptyString",
+          "examples": [
+            "https://thenounproject.com/icon/318010/"
+          ]
+        }
+      }
+    }
+  }
+}
