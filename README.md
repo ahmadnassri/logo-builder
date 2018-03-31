@@ -99,11 +99,11 @@ logo(config, './logo/', 'svg'))
 
 [travis-image]: https://img.shields.io/travis/ahmadnassri/logo-builder.svg?style=flat-square
 
-[npm-url]: https://www.npmjs.com/package/logo-builder
+[npm-url]: https://www.npmjs.com/package/@ahmadnassri/logo-builder
 
-[npm-version]: https://img.shields.io/npm/v/logo-builder.svg?style=flat-square
+[npm-version]: https://img.shields.io/npm/v/@ahmadnassri/logo-builder.svg?style=flat-square
 
-[npm-downloads]: https://img.shields.io/npm/dm/logo-builder.svg?style=flat-square
+[npm-downloads]: https://img.shields.io/npm/dm/@ahmadnassri/logo-builder.svg?style=flat-square
 
 [codeclimate-url]: https://codeclimate.com/github/ahmadnassri/logo-builder
 
