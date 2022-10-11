@@ -39,7 +39,7 @@
   "dependencies": {
     "ajv": "^6.4.0",
     "canvas": "^2.0.0-alpha.12",
-    "canvg": "^1.0.0",
+    "canvg": "^4.0.1",
     "xml2js": "^0.4.19",
     "yargs": "^11.0.0"
   }
